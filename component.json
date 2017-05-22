@@ -1,0 +1,15 @@
+{
+    "name": "LogDB",
+    "alias": "logdb",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "App\\Components\\LogDB\\Providers\\LogDBServiceProvider"
+    ],
+    "aliases":{},
+    "files": [
+        "start.php"
+    ]
+}
