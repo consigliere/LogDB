@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class LogDB extends Model
 {
-    protected $table      = 'dblog';
+    protected $table      = 'log_db';
     protected $primaryKey = 'id';
     protected $fillable   = [
         "level",
