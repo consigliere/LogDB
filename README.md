@@ -1,3 +1,9 @@
+# Log data into database
+
+## Requirement
+
+1. Laravel framework/ onsigbaar framework/ onsigbaar components/ onsigbaar based application
+
 ## Install
 
 ```bash
@@ -8,16 +14,32 @@ composer require consigliere/logdb
 
 ```php
 'providers' => [
-        // Component
+        // ...
         App\Components\LogDB\Providers\LogDBServiceProvider::class,
-
+        // ...
     ],
 ```
 
-## Optional : Publish config (Onsigbaar framework only)
+## Publish migratian
 
 ```bash
+# Temporarily this command require laravel with onsigbaar/components package installed, will change it in future release
+# https://github.com/onsigbaar/components
+php artisan component:publish-migration LogDB
+```
+
+## Optional : Publish config
+
+```bash
+# Temporarily this command require laravel with onsigbaar/components package installed, will change it in future release
+# https://github.com/onsigbaar/components
 php artisan component:publish-config LogDB
+```
+
+## Migration
+
+```bash
+php artisan migrate
 ```
 
 ## Fire events basic
