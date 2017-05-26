@@ -2,7 +2,7 @@
 
 ## Requirement
 
-1. Laravel framework/ onsigbaar framework/ onsigbaar components/ onsigbaar based application
+1. Laravel framework/ onsigbaar framework/ onsigbaar based application
 
 ## Install
 
@@ -23,7 +23,7 @@ composer require consigliere/logdb
 ## Publish migratian
 
 ```bash
-# Temporarily this command require laravel with onsigbaar/components package installed, will change it in future release
+# Temporarily this command require laravel with onsigbaar/components package installed, change has been planned for future release
 # https://github.com/onsigbaar/components
 php artisan component:publish-migration LogDB
 ```
@@ -31,7 +31,7 @@ php artisan component:publish-migration LogDB
 ## Optional : Publish config
 
 ```bash
-# Temporarily this command require laravel with onsigbaar/components package installed, will change it in future release
+# Temporarily this command require laravel with onsigbaar/components package installed, change has been planned for future release
 # https://github.com/onsigbaar/components
 php artisan component:publish-config LogDB
 ```
