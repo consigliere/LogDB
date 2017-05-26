@@ -1,5 +1,7 @@
 # Log data into database
 
+The logger provides the eight logging levels defined in RFC 5424: emergency, alert, critical, error, warning, notice, info and debug.
+
 ## Requirement
 
 1. Laravel framework/ onsigbaar framework/ onsigbaar based application
