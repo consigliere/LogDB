@@ -58,8 +58,6 @@ class LogDBServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/../../Config/config.php', 'logdb'
         );
-
-        
     }
 
     /**
