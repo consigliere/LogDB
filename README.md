@@ -1,10 +1,6 @@
-# Log data into database
+# Log data into database for laravel
 
-The logger provides the eight logging levels defined in RFC 5424: emergency, alert, critical, error, warning, notice, info and debug.
-
-## Requirement
-
-1. Laravel framework/ onsigbaar framework/ onsigbaar based application
+The logger provides the eight logging levels defined in RFC 5424: emergency, alert, critical, error, warning, notice, info and debug. Passing message into event and It will automatically detect request url, request method, client ip, browser, user os etc and save it into database. In event it failed it will simply log data into storage log. 
 
 ## Install
 
@@ -22,26 +18,16 @@ composer require consigliere/logdb
     ],
 ```
 
-## Publish migratian
-
-```bash
-# Temporarily this command require laravel with onsigbaar/components package installed, change has been planned for future release
-# https://github.com/onsigbaar/components
-php artisan component:publish-migration LogDB
-```
-
-## Optional : Publish config
-
-```bash
-# Temporarily this command require laravel with onsigbaar/components package installed, change has been planned for future release
-# https://github.com/onsigbaar/components
-php artisan component:publish-config LogDB
-```
-
 ## Migration
 
 ```bash
 php artisan migrate
+```
+
+## Publish config
+
+```bash
+php artisan vendor:publish --tag=config-logdb
 ```
 
 ## Fire events basic
@@ -87,7 +73,7 @@ php artisan migrate
 ```
 
 ## Fire events using default config example
-Event should be wrapped in an configuration variable array, example of firing events using default package config.
+Event should be wrapped in an configuration array, example of firing events using default package config.
 
 ### Emergency
 ```php
