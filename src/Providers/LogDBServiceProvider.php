@@ -25,6 +25,8 @@ class LogDBServiceProvider extends ServiceProvider
         $this->registerConfig();
         $this->registerViews();
 
+        $this->loadMigrationsFrom(__DIR__.'/../../Database/Migrations');
+
         $dispatcher = $this->app->make('events');
         $dispatcher->subscribe('App\Components\LogDB\Listeners\LogDBEventListener');
     }
@@ -52,10 +54,12 @@ class LogDBServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../../Config/config.php' => config_path('logdb.php'),
-        ]);
+        ], 'config-logdb');
         $this->mergeConfigFrom(
             __DIR__.'/../../Config/config.php', 'logdb'
         );
+
+        
     }
 
     /**
